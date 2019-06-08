@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*start header */
+.header {
+    width: 100%;
+    height: 700px;
+    background-color: #333333;
+}
+.navbar-default {
+    background: #333333;
+    border: none;
+    border-radius: 0;
+}
+.navbar-default .navbar-brand {
+    padding-top: 30px;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar-nav > li > a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    font-size: 18px;
+}
+.navbar {
+    margin-bottom: 0;
+}
+
+.header .home {
+    padding-top: 100px;
+}
+
+.header .home .home-text h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.header .home .home-text p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.header .home .home-img {
+
+}
+/*end header */
+
+/*star about us */
+.aboutus {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/*end about us */
+
+/*start products */
+.products {
+    margin-bottom: 40px;
+}
+
+.products .product{
+    margin-bottom:40px;
+    border: 1px solid #f7f7f7;
+}
+.products .product h4:last-child {
+    color: #777777;
+}
+.products .more {
+    margin: auto;
+    width: 150px;
+    display: block;
+    overflow: hidden;
+}
+/*end products */
+
+/*start shops */
+.shops {
+
+}
+.shops .shop {
+    border: 1px solid #f7f7f7;
+    margin-bottom: 25px;
+}
+.shops .shop h4:last-child {
+    color: #777777;
+}
+/*end shops */
+
+/*start items*/
+.items {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.might-item {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 40px 0;
+    background-color: #dddddd;
+}
+.might-item h2 {
+    margin-bottom: 30px;
+}
+/*end items */
+
+/*start cart */
+.carts .cart-info h2 {
+    margin:  30px 0;
+}
+.carts .cart-info table {
+    border-bottom: 1px solid #ccc;
+}
+.carts .code form {
+    border:  1px solid #cccccc;
+    width: 300px;
+    padding: 20px;
+}
+.carts .total {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f6f6f6;
+}
+/*end cart */
+
