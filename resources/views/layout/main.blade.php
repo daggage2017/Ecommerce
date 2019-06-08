@@ -57,6 +57,7 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <scritp src = "{{ asset('js/app.js') }}"></scritp>
+<scritp src = "{{ asset('js/bootstrap.min.js') }}"></scritp>
 
 @yield('script')
 </body>

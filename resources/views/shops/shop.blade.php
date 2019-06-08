@@ -9,6 +9,9 @@
             color: #222222;
             text-decoration: none;
         }
+        .sidebar .side .active {
+            font-weight: bold;
+        }
     </style>
  @endsection()
 
@@ -38,7 +41,7 @@
                         </div>
                          <ul class="list-unstyled">
                              @foreach($categories as $category)
-                             <li><a href="{{ route('shops.shop', ['category'  => $category->slug ]) }}">{{ $category->name }}</a></li>
+                             <li class="{{$category->slug == request()->category ? 'active' : '' }}"><a href="{{ route('shops.shop', ['category'  => $category->slug ]) }}">{{ $category->name }}</a></li>
                              @endforeach
                          </ul>
                      </div>
@@ -72,6 +75,8 @@
                         @endforelse
 
                 </div>
+
+                {{ $products->links() }}
             </div>
 
         </div>

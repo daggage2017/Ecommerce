@@ -16,26 +16,23 @@ class ShopController extends Controller
         if (request()->category ) {
               $products = Product::with('categories')->whereHas('categories', function ($query) {
                   $query->where('slug', request()->category);
-              })->get();
-
+              });
               $categoryName = $categories->where('slug', request()->category)->first()->name;
-
         } else {
-            $products = Product::inRandomOrder()->take(9)->get();
+            $products = Product::where('feature', true);
             $categoryName = 'Features';
         }
-
         if (request()->sort == 'low-to-high') {
-            $products = $products->sortBy('price');
+            $products = $products->orderBy('price')->paginate(9);
         }elseif (request()->sort == 'high-to-low') {
-            $products = $products->sortByDesc('price');
+            $products = $products->orderBy('price', 'DESC')->paginate(9);
+        } else {
+           $products =  $products->paginate(9);
         }
-
 
 
         return view('shops.shop', compact('products', 'categories', 'categoryName'));
     }
-
 
     public function show($slug)
     {

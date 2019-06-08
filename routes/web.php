@@ -18,6 +18,7 @@ Route::get('/shops', 'ShopController@index')->name('shops.shop');
 Route::get('/shops/{slug}', 'ShopController@show')->name('shops.show');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart/edit/{product}', 'CartController@update')->name('cart.update');
 Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
 
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');

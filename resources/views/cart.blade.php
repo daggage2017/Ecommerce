@@ -46,7 +46,7 @@
 
                             </td>
                             <td>
-                                <select name="" id="">
+                                <select name="" class="quantity">
                                     <option value="1">1</option>
                                     <option value="1">2</option>
                                     <option value="1">3</option>
@@ -162,7 +162,16 @@
 @section('script')
 
     <script type="text/javascript">
-
+        (function () {
+            var className = document.querySelectorAll('.quantity');
+              Array.from(className).forEach(function (element) {
+                  element.addEventListener('change', function () {
+                     $.post("{{ route('cart.update', 4) }}", function (data) {
+                          console.log(data)
+                      })
+                  })
+              })
+         } ());
     </script>
 
 @endsection
